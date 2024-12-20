@@ -52,7 +52,7 @@ pipeline {
         stage("Build & Push Docker Image") {
             steps {
                 script {
-                    docker.withRegistry('', 'docker-credentials-id') {
+                    docker.withRegistry('', 'dockerhub') {
                         def dockerImage = docker.build "${IMAGE_NAME}:${env.BUILD_NUMBER}"
                         dockerImage.push("${env.BUILD_NUMBER}")
                         dockerImage.push('latest')
