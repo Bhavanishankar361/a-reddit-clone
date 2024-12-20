@@ -89,5 +89,6 @@ post {
                to: 'bhavanishankarm1994@gmail.com',                              
                attachmentsPattern: 'trivyfs.txt,trivyimage.txt'
         }
+	
      }
 }
